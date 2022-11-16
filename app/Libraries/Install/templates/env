@@ -1,0 +1,21 @@
+#--------------------------------------------------------------------
+# ENVIRONMENT
+#--------------------------------------------------------------------
+
+CI_ENVIRONMENT = development
+#CI_ENVIRONMENT = production
+
+#--------------------------------------------------------------------
+# APP
+#--------------------------------------------------------------------
+app.baseURL = '{baseURL}'
+#app.indexPage = ''
+#--------------------------------------------------------------------
+# DATABASE
+#--------------------------------------------------------------------
+
+database.default.hostname = {hostname}
+database.default.database = {database}
+database.default.username = {username}
+database.default.password = {dbpassword}
+database.default.DBDriver = MySQLi

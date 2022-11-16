@@ -1,0 +1,67 @@
+<?php namespace Config;
+
+use CodeIgniter\Config\BaseConfig;
+
+class MasterConfig extends BaseConfig
+{
+    
+    public $siteName = '{siteName}';
+    public $licenseKey = '{license}';
+    public $customFront = false; //true to enable custom front pages (controller Front.php)
+
+     public $media = [
+     //keys (default and future ones) should not be changed, all keys should be unique
+     'default'=> ['base'=>'{base}','secret'=>'{media-secret}'],
+     //you can add more here 
+     ]; 
+     public $previewDomain = '{previewDomain}';
+     public $resellers = [
+     //keys (rs1 and future ones) should not be changed, all keys should be unique
+     'rs1' => [
+     'label'=>'default',
+'{reseller}'     ],
+     //you can add more here 
+     ];
+    
+    public $fontsKey = '{fontsKey}';
+    
+    public $captureApi = [
+     'keys' => [
+         'techulus'  => ['key'=>'{techulusKey}','secret'=>'{techulusSecret}'],
+         'screenly' => '{screenly}',
+     ],
+     'provider' => ['template'=>'{providerTemplate}','site'=>'{providerSite}']  
+    ];
+
+    
+    public $allowedPeriod = [1,3,6,12]; //in months
+    public $paymentMethods = [
+    {paymentMethods}    ];
+    public $paymentCurrency = '{currency}';
+    
+    
+    public $paymentTest = false; //true to enable test mode
+    public $paymentTestMethods = [
+    //'dp'=>['label'=>'Dotpay','id'=>'','pin'=>''], 
+    //'pp'=>['label'=>'PayPal','id'=>'']
+    ];
+    
+    public $mail = array(
+     'protocol' =>'smtp',
+'{mailconfig}',     'newline' =>"\r\n",
+     'mailType' => 'html',
+     'userAgent' =>''
+    );
+    
+    public $notify = [
+    //notify email
+    'email'=>'{email}',
+    //notify when only x more sites can be published
+    'siteLimit'=>[{siteLimit}],
+    //notify when license verification failed
+    'licenseError'=>{licenseError},
+    ];
+    
+    
+
+}
